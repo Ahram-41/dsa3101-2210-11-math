@@ -1,0 +1,12 @@
+\begin{aligned}
+    f_x(x)=f_y\left(g^{-1}(x)\right)\left|\frac{d}{d x} n^{-1}(x)\right| \\
+    F_x(x) &=p(y \leqslant x) \\
+    &=p(\ln y \leqslant x) \\
+    &=p\left(y \leqslant e^x\right) \\
+    &=F y\left(e^x\right) \\
+    f_x(x) &=\frac{d}{d x} F_x(x) \\
+    &=\frac{d}{d x} F_y\left(e^x\right) \\
+    &=e^x \cdot f_y\left(e^x\right) \\
+    &=e^x \cdot e^{-e^x} \\
+    &=e^{x-e^x}
+    \end{aligned}
