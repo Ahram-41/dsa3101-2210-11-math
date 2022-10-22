@@ -1,8 +1,13 @@
+
 import React from 'react'
 import './Cards.css'
+import { Link } from 'react-router-dom';
+
 function Card({title,imageUrl,body}) {
     return (
+        
         <div className= 'card-container'>
+            <Link style={{color: 'black'}} to ={'/mod1'}>
             <div className="image-container">
                 <img src={imageUrl} alt='' />
             </div>
@@ -16,11 +21,13 @@ function Card({title,imageUrl,body}) {
             </div>
 
             <div className="btn">
-                <button>
+                <button onclick= {'/mod1'}>
                     <a>View more</a>  
                 </button>
             </div>
+            </Link>
         </div>
+        
     )
 }
 
