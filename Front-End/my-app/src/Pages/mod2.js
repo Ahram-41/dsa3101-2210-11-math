@@ -12,4 +12,5 @@ function Mod2() {
   );
 }
 
+
 export default Mod2;

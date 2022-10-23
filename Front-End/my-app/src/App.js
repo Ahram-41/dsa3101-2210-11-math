@@ -8,6 +8,7 @@ import Login from "./Login.js";
 import Mod1 from './Pages/mod1';
 import Mod2 from './Pages/mod2';
 import Mod3 from './Pages/mod3';
+import Main from './Pages/Main';
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
                 <Route path='/mod1' element={<Mod1 />} />
                 <Route path='/mod2' element={<Mod2 />} />
                 <Route path='/mod3' element={<Mod3 />} />
+                <Route path='/Main' element={<Main />} />
             </Routes>
         </Router>
         </div>
