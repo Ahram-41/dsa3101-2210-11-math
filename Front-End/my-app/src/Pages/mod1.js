@@ -27,9 +27,9 @@ function Mod1() {
     <Spacer size={40} />
     <h3>Graded:</h3>
     <Select className="padded" options = {graded} />
-    <Link style={{color: 'black'}} to ={'/mod2'}>
+    <Link style={{color: 'black'}} to ={'/Main'}>
     <div className="btn">
-      <button onclick= {'/mod2'}>
+      <button onclick= {'/Main'}>
         <a>Next Page</a>
       </button>
     </div>
