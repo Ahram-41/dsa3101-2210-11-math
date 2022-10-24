@@ -41,6 +41,11 @@ class Main extends React.Component {
             <br />
             <br />
             <br />
+            <h1> Please upload Zip folder </h1>
+            <br />
+            <p> Zip folder should contain a folder for each student number, and for each student folder, it should contain a folder for each question</p> 
+            <br />
+            <br />
             <br />
             <br />
               <input ref={(ref) => { this.uploadInput = ref; }} type="file" />
