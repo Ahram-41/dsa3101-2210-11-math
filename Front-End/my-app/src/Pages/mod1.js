@@ -32,7 +32,7 @@ function Mod1() {
     <Link style={{color: 'black'}} to ={'/Main'}>
     <div className="button">
       <button style={{Color: 'white'}} onclick= {'/Main'}>
-        <a>Next Page</a>
+        <a>Confirm</a>
       </button>
     </div>
     </Link>

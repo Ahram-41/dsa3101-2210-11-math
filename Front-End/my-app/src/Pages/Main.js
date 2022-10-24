@@ -1,6 +1,7 @@
 import React from 'react'
 import './Main.css'
 import Navbar from '../Components/Navbar.js';
+import '../Components/Cards.css'
 
 class Main extends React.Component {
     constructor(props) {
