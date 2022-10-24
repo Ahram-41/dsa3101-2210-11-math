@@ -2,6 +2,7 @@ import React from 'react'
 import './Main.css'
 import Navbar from '../Components/Navbar.js';
 import '../Components/Cards.css'
+import { Link } from 'react-router-dom';
 
 class Main extends React.Component {
     constructor(props) {
@@ -57,9 +58,11 @@ class Main extends React.Component {
             </div>
             <br />
             <br />
+            <Link style={{color: 'black'}} to ={'/Annotate'}>
             <div class = "content">
               <button class = "btn">Upload</button>
             </div>
+            </Link>
           </form>
           </>
         );

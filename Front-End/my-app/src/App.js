@@ -9,6 +9,7 @@ import Mod1 from './Pages/mod1';
 import Mod2 from './Pages/mod2';
 import Mod3 from './Pages/mod3';
 import Main from './Pages/Main';
+import Annotate from './Pages/Annotate';
 
 function App() {
     return (
@@ -22,6 +23,8 @@ function App() {
                 <Route path='/mod2' element={<Mod2 />} />
                 <Route path='/mod3' element={<Mod3 />} />
                 <Route path='/Main' element={<Main />} />
+                <Route path='/Annotate' element={<Annotate />} />
+                <Route path='/testpdf' element={<testpdf/>} />
             </Routes>
         </Router>
         </div>
