@@ -67,6 +67,11 @@ h3,p{
 
 }
 
+.btn paddedbutton{
+    padding-left: 50%
+
+}
+
 .btn button:hover{
     background:rgba(27,156,252,0.1);
 
