@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react'
 import Navbar from '../Components/Navbar.js';
 import Select from 'react-select';
 import "./mod1.css";
 import { Link } from 'react-router-dom';
+import { useTable } from 'react-table';
 
 
 function Mod1() {
@@ -16,26 +17,45 @@ function Mod1() {
     { value: 'Assignment 2', label: 'Assignment 2' }
   ];
   const Spacer = require('react-spacer');
+  const data= [
+    {assignment: "Assignment 1", marked: "26/07/2022", lastedited: "03/08/2022"},
+    {assignment: "Assignment 2", marked: "03/08/2022", lastedited: "21/08/2022"}
+  ];
   return (
     <>
     <Navbar />
-    <div className='mod1'>
-      <h2>Select the assignment to mark!</h2>
+    <p style={{backgroundColor: "darkorange", fontSize: 18, border:50}} className="mod1">Select the assignment you want to mark.</p>
+    <div>
+    <h3 className="padded">To be graded:</h3>
     </div>
-    <h3>To be graded:</h3>
     <Select className="padded" options = {tobegraded} />
-    <Spacer size={40} />
-    <h3>Graded:</h3>
-    <Select className="padded" options = {graded} />
     <Link style={{color: 'black'}} to ={'/Main'}>
-    <div className="btn">
-      <button onclick= {'/Main'}>
+    <div className="button">
+      <button style={{Color: 'white'}} onclick= {'/Main'}>
         <a>Next Page</a>
       </button>
     </div>
     </Link>
+    <h3 className="padded">Graded assignments:</h3>
+    <div className="mod1">
+      <table>
+          <tr>
+            <th>Assignment</th>
+            <th>Marked date</th>
+            <th>Last edited</th>
+          </tr>
+          {data.map((val, key) => {
+            return (
+              <tr key={key}>
+                <td>{val.assignment}</td>
+                <td>{val.marked}</td>
+                <td>{val.lastedited}</td>
+              </tr>
+            )
+          })}
+      </table>
+    </div>
     </>
   );
 }
-
 export default Mod1;
