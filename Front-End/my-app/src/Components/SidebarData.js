@@ -5,27 +5,45 @@ import * as IoIcons from 'react-icons/io';
 
 export const SidebarData = [
   {
-    title: 'Modules',
+    title: 'Select module',
     path: '/profile',
     icon: <AiIcons.AiFillHome />,
     cName: 'nav-text'
   },
   {
-    title: 'Mod 1',
+    title: 'ST3131',
     path: '/mod1',
     icon: <AiIcons.AiFillHome />,
     cName: 'nav-text'
   },
   {
-    title: 'Mod 2',
+    title: 'ST3248',
     path: '/mod2',
-    icon: <IoIcons.IoIosPaper />,
+    icon: <AiIcons.AiFillHome />,
     cName: 'nav-text'
   },
   {
-    title: 'Mod 3',
+    title: 'DSA3101',
     path: '/mod3',
-    icon: <FaIcons.FaCartPlus />,
+    icon: <AiIcons.AiFillHome />,
+    cName: 'nav-text'
+  },
+  {
+    title: 'ST4231',
+    path: '/mod4',
+    icon: <AiIcons.AiFillHome />,
+    cName: 'nav-text'
+  },
+  {
+    title: 'ST4233',
+    path: '/mod5',
+    icon: <AiIcons.AiFillHome />,
+    cName: 'nav-text'
+  },
+  {
+    title: 'ST4245',
+    path: '/mod6',
+    icon: <AiIcons.AiFillHome />,
     cName: 'nav-text'
   }
 ];

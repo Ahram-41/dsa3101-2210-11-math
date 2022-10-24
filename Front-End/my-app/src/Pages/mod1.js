@@ -24,7 +24,7 @@ function Mod1() {
   return (
     <>
     <Navbar />
-    <p style={{backgroundColor: "darkorange", fontSize: 18, border:50}} className="mod1">Select the assignment you want to mark.</p>
+    <p style={{backgroundColor: "darkorange", fontSize: 18, border:50}} className="mod1">Select the ST3131 assignment you want to mark.</p>
     <div>
     <h3 className="padded">To be graded:</h3>
     </div>

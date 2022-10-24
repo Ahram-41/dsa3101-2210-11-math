@@ -7,7 +7,7 @@ import { useTable } from 'react-table';
 
 
 
-function Mod3() {
+function Mod6() {
   const tobegraded = [
     { value: 'Assignment 3', label: 'Assignment 3' },
     { value: 'Mid-term exams', label: 'Mid-term exams' },
@@ -25,7 +25,7 @@ function Mod3() {
   return (
     <>
     <Navbar />
-    <p style={{backgroundColor: "darkorange", fontSize: 18, border:50}} className="mod1">Select the DSA3101 assignment you want to mark.</p>
+    <p style={{backgroundColor: "darkorange", fontSize: 18, border:50}} className="mod1">Select the ST4245 assignment you want to mark.</p>
     <div>
     <h3 className="padded">To be graded:</h3>
     </div>
@@ -60,4 +60,4 @@ function Mod3() {
   );
 }
 
-export default Mod3;
+export default Mod6;
