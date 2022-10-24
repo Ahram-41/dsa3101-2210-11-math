@@ -58,9 +58,14 @@ class Main extends React.Component {
             </div>
             <br />
             <br />
-            <Link style={{color: 'black'}} to ={'/Annotate'}>
             <div class = "content">
               <button class = "btn">Upload</button>
+            </div>
+            <Link style={{color: 'black'}} to ={'/Annotate'}>
+            <div class = "content">
+            <br />
+            <br />
+              <button class = "btn">Next Page</button>
             </div>
             </Link>
           </form>
