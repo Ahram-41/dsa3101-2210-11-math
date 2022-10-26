@@ -25,13 +25,34 @@ def transformLatex(latex):
     str = latex
     return str
 
+
+def derivative(latex):
+  tex = r"\frac{d}{dx}" +latex
+  return latex2latex(tex)
+
+
+def definite_integration(latex,a,b):
+  a=str(a)
+  b=str(b)
+  tex=r"\int_{" + a + "}^{" + b + "}" + latex + "\,dx"
+  return  latex2latex(tex)
+
+
+def undefinite_integration(latex):
+  tex=r"\int" + latex + "\,dx "
+
+  return  latex2latex(tex)
+
 '''
 is_equivalent is to check if the equation holds or not 
 by checking whether the left side is equivalent with right side
 '''
 def is_equivalent(a_latex, b_latex):
-    # this is a placeholder
-    return True
+    #if is_combination(a_latex) or is_combination(b_latex):
+     # return cal_combination(a_latex) == cal_combination(b_latex)
+
+    #else:
+    return latex2latex(a_latex) == latex2latex(b_latex)
 
 '''
 this fuction is to calculate the result of latex
