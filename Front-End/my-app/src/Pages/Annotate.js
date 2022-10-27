@@ -17,21 +17,31 @@ function Annotate() {
     return (
     <>
     <Navbar />
+    <div className='rowC'>
+        <button className="student-button"
+        onClick={() => setDocument("another-example.pdf")}>
+            Previous student
+        </button>
+        <button className="student-button"
+        onClick={() => setDocument("another-example.pdf")}>
+            Next student
+        </button>
+    </div>
     <Tabs>
         <div label="Question 1">
+            <button className="discreet-button"
+            onClick={() => setDocument("document.pdf")}>
+                <text style={{color:'black'}}>Refresh page</text>
+            </button>
             <div className="Ann-viewer">
-                <button className="Ann-button" 
-                onClick={() => setDocument("document.pdf")}>
-                Refresh page
-                </button>
                 <PdfViewerComponent document={document} />
-            </div>
+            </div>      
         </div>
         <div label="Question 2">
             <div className="Ann-viewer">
-                <button className="Ann-button"
+                <button className="discreet-button"
                 onClick={() => setDocument("another-example.pdf")}>
-                    Refresh page
+                    <text style={{color:'black'}}>Refresh page</text>
                 </button>
                 <PdfViewerComponent document={document} />
             </div>
