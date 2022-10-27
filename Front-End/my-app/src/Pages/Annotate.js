@@ -10,6 +10,7 @@ import PdfViewerComponent from "../Components/PdfViewerComponent.js";
 import Tabs from "../Components/Tabs.js"
 import "./Annotate.css"
 import "./Annotate1.css"
+import typewritten from './handwritten.png'
 
 function Annotate() {
     const [document, setDocument] = useState("document.pdf");
@@ -46,8 +47,12 @@ function Annotate() {
                 <PdfViewerComponent document={document} />
             </div>
         </div>
-        <div label="See latex version">
-          Nothing to see here, this tab is <em>extinct</em>!
+        <div label="See original version">
+        <nav className="nav">
+          <div className="container">
+            <img  src={typewritten}/>
+          </div>
+        </nav>
         </div>
     </Tabs>
     </>
