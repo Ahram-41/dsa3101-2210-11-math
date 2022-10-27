@@ -32,8 +32,19 @@
     border:100px;
     display:block;
     width: 100%;
-    background: rgb(240, 232, 232);
-    color: white;
+    background: rgb(85, 84, 136);
+    color: rgb(231, 231, 238);
+    font-size: 1em;
+    padding: 0.2em;
+    border-color:brown;
+    border-radius: 100px;
+  }
+  .version-button {
+    border:100px;
+    display:block;
+    width: 100%;
+    background: rgb(85, 84, 136);
+    color: rgb(231, 231, 238);
     font-size: 1em;
     padding: 0.2em;
     border-color:brown;

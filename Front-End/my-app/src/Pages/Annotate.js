@@ -21,19 +21,29 @@ function Annotate() {
     <div className='rowC'>
         <button className="student-button"
         onClick={() => setDocument("another-example.pdf")}>
-            Previous student
+            {String.fromCharCode(8592)} Previous student
         </button>
         <button className="student-button"
         onClick={() => setDocument("another-example.pdf")}>
-            Next student
+            Next student {String.fromCharCode(8594)}
         </button>
     </div>
     <Tabs>
         <div label="Question 1">
             <button className="discreet-button"
             onClick={() => setDocument("document.pdf")}>
-                <text style={{color:'black'}}>Refresh page</text>
+               Refresh page
             </button>
+            <div className='rowC'>
+                <button className="version-button"
+                onClick={() => setDocument("another-example.pdf")}>
+                    See pdf version
+                </button>
+                <button className="version-button"
+                onClick={() => setDocument("another-example.pdf")}>
+                    See original version
+                </button>
+            </div>
             <div className="Ann-viewer">
                 <PdfViewerComponent document={document} />
             </div>      
@@ -42,8 +52,18 @@ function Annotate() {
             <div className="Ann-viewer">
                 <button className="discreet-button"
                 onClick={() => setDocument("another-example.pdf")}>
-                    <text style={{color:'black'}}>Refresh page</text>
+                    Refresh page
                 </button>
+                <div className='rowC'>
+                    <button className="version-button"
+                    onClick={() => setDocument("another-example.pdf")}>
+                        See pdf version
+                    </button>
+                    <button className="version-button"
+                    onClick={() => setDocument("another-example.pdf")}>
+                        See original version
+                    </button>
+                </div>
                 <PdfViewerComponent document={document} />
             </div>
         </div>
