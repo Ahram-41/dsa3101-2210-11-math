@@ -7,6 +7,9 @@ import { useTable } from 'react-table';
 import { useEffect, useRef } from 'react';
 import { useState } from "react";
 import PdfViewerComponent from "../Components/PdfViewerComponent.js";
+import Tabs from "../Components/Tabs.js"
+import "./Annotate.css"
+import "./Annotate1.css"
 
 function Annotate() {
     const [document, setDocument] = useState("document.pdf");
@@ -14,16 +17,29 @@ function Annotate() {
     return (
     <>
     <Navbar />
-    <div className="Ann">
-        <button
-        className="Ann-button"
-        onClick={() => setDocument("another-example.pdf")}>
-            Next Page
-        </button>
-      <div className="Ann-viewer">
-        <PdfViewerComponent document={document} />
-      </div>
-    </div>
+    <Tabs>
+        <div label="Question 1">
+            <div className="Ann-viewer">
+                <button className="Ann-button" 
+                onClick={() => setDocument("document.pdf")}>
+                Refresh page
+                </button>
+                <PdfViewerComponent document={document} />
+            </div>
+        </div>
+        <div label="Question 2">
+            <div className="Ann-viewer">
+                <button className="Ann-button"
+                onClick={() => setDocument("another-example.pdf")}>
+                    Refresh page
+                </button>
+                <PdfViewerComponent document={document} />
+            </div>
+        </div>
+        <div label="See latex version">
+          Nothing to see here, this tab is <em>extinct</em>!
+        </div>
+    </Tabs>
     </>
   );
 }
