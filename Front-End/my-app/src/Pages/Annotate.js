@@ -10,7 +10,8 @@ import PdfViewerComponent from "../Components/PdfViewerComponent.js";
 import Tabs from "../Components/Tabs.js"
 import "./Annotate.css"
 import "./Annotate1.css"
-import typewritten from './handwritten.png'
+import handwritten from './handwritten3.png'
+
 
 function Annotate() {
     const [document, setDocument] = useState("document.pdf");
@@ -29,50 +30,31 @@ function Annotate() {
         </button>
     </div>
     <Tabs>
-        <div label="Question 1">
-            <button className="discreet-button"
+        <div label="Question">
+            {/* <button className="discreet-button"
             onClick={() => setDocument("document.pdf")}>
                Refresh page
-            </button>
+            </button> */}
             <div className='rowC'>
                 <button className="version-button"
-                onClick={() => setDocument("another-example.pdf")}>
-                    See pdf version
+                onClick={() => setDocument("document.pdf")}>
+                    Question 1
                 </button>
                 <button className="version-button"
                 onClick={() => setDocument("another-example.pdf")}>
-                    See original version
+                    Question 2
                 </button>
             </div>
             <div className="Ann-viewer">
                 <PdfViewerComponent document={document} />
             </div>      
         </div>
-        <div label="Question 2">
-            <div className="Ann-viewer">
-                <button className="discreet-button"
-                onClick={() => setDocument("another-example.pdf")}>
-                    Refresh page
-                </button>
-                <div className='rowC'>
-                    <button className="version-button"
-                    onClick={() => setDocument("another-example.pdf")}>
-                        See pdf version
-                    </button>
-                    <button className="version-button"
-                    onClick={() => setDocument("another-example.pdf")}>
-                        See original version
-                    </button>
-                </div>
-                <PdfViewerComponent document={document} />
-            </div>
-        </div>
+        
         <div label="See original version">
-        <nav className="nav">
-          <div className="container">
-            <img  src={typewritten}/>
-          </div>
-        </nav>
+        
+            <div className="orig">
+                <img  src={handwritten} style={{width:'35%' ,height:'auto'}}/>
+            </div>
         </div>
     </Tabs>
     </>
