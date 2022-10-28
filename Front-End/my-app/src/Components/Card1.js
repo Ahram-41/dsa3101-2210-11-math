@@ -9,7 +9,7 @@ function Card1({title,imageUrl,body}) {
         <div className= 'card-container'>
             <Link style={{color: 'black'}} to ={'/mod1'}>
             <div className="image-container">
-                <img src={imageUrl} alt='' />
+                <img src = "LR.jpeg" alt='' />
             </div>
             <div className="card-content">
                 <div className="card-title">

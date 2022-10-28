@@ -9,7 +9,7 @@ function Card4({title,imageUrl,body}) {
         <div className= 'card-container'>
             <Link style={{color: 'black'}} to ={'/mod4'}>
             <div className="image-container">
-                <img src={imageUrl} alt='' />
+                <img src="computer_stats.jfif" alt='' />
             </div>
             <div className="card-content">
                 <div className="card-title">
