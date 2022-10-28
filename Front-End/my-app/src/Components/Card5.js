@@ -9,7 +9,7 @@ function Card5({title,imageUrl,body}) {
         <div className= 'card-container'>
             <Link style={{color: 'black'}} to ={'/mod5'}>
             <div className="image-container">
-                <img src={imageUrl} alt='' />
+                <img src= "Linear_Model.png" alt='' />
             </div>
             <div className="card-content">
                 <div className="card-title">

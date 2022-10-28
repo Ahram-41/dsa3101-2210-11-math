@@ -9,7 +9,7 @@ function Card3({title,imageUrl,body}) {
         <div className= 'card-container'>
             <Link style={{color: 'black'}} to ={'/mod3'}>
             <div className="image-container">
-                <img src={imageUrl} alt='' />
+                <img src="react_flask_logo.png" alt='' />
             </div>
             <div className="card-content">
                 <div className="card-title">
