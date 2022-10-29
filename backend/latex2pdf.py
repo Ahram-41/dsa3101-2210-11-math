@@ -4,13 +4,9 @@ import subprocess
 
 
 
-# def createpdf(output):
-def createpdf(tex_filename):
-    # args = ['pdflatex', output, '-interaction=nonstopmode']
-    # process = subprocess.call(args,
-    #                 stdout = subprocess,
-    #                 stderr = subprocess,
-    #                 stdin  = subprocess)
+
+def createPDF(tex_filename):
+
     # TeX source filename
     filename, ext = os.path.splitext(tex_filename)
     # the corresponding PDF filename
