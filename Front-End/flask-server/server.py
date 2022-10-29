@@ -3,6 +3,7 @@ from flask import Flask, request, session
 from werkzeug.utils import secure_filename
 from flask_cors import CORS
 import logging
+# import convert_latex
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger('HELLO ! ')
@@ -26,6 +27,11 @@ def fileUpload():
     file.save(destination)
     session['uploadFilePath'] = destination
     response = "Uploaded"
+
+    # # unzip the file and translate to latex
+    # # destination needs to be the absolute path of zip file
+    # convert_latex.open_file(destination)
+    
     return response
 
 

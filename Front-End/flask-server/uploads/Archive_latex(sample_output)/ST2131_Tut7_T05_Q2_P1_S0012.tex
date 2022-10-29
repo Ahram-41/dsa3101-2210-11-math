@@ -1,0 +1,15 @@
+Let $B$ be the minimum bid of the other participating company, $B \sim V(70,140)$ Let $x$ be the bid, then the profit can be denoted as
+\[
+\begin{aligned}
+E[P] &=(x-100) \\
+&=(x-100)(1-P(x>B)) \\
+&=(x-100) \cdot(1-\sqrt[F]{3}(x)) \\
+&=(x-100)\left(1-\int_{x}^{140} \frac{1}{70} d x\right) \\
+&=(x-100)\left(1-\frac{1}{70} \cdot(140-x)\right) \\
+&=(x-100) \cdot \frac{x-70}{70} \\
+&=\frac{-x^{2}+240 x-14000}{70}
+\end{aligned}
+\]
+To maximize $E[P]$, wefind $\left(\frac{-x^{2}+290 x-19000}{70}\right)^{\prime}=0$
+$\Rightarrow x=120, f^{\prime \prime}(x)<0$, which shows its the maximum value
+Thus, you should bid 120,000 for a maximized profit
