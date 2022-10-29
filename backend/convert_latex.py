@@ -35,7 +35,11 @@ s1+="\\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1
 s1+="\\usepackage{graphicx}\n"
 s1+="\\usepackage[colorlinks=true, allcolors=blue]{hyperref}\n"
 s1+="\\begin{document}\n\n"
-s2="\n\n\\end{document}" 
+# can add if condition to specify
+s1+="\\begin{math}\n"
+
+s2="\\end{math}\n" 
+s2+="\n\n\\end{document}" 
 
 def amendLatex(str):
 	str = s1+str+s2
