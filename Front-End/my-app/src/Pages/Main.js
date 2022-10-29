@@ -1,7 +1,7 @@
 import React from 'react'
 import './Main.css'
-import Navbar from '../Components/Navbar.js';
-import '../Components/Cards.css'
+import Navbar from '../Components/Navbar.js'
+// import '../Components/Cards.css'
 import { Link } from 'react-router-dom';
 
 class Main extends React.Component {
@@ -59,13 +59,13 @@ class Main extends React.Component {
             <br />
             <br />
             <div class = "content">
-              <button class = "btn">Upload</button>
+              <button class = "btns">Upload</button>
             </div>
             <Link style={{color: 'black'}} to ={'/Annotate'}>
             <div class = "content">
             <br />
             <br />
-              <button class = "btn">Next Page</button>
+              <button class = "btns">Next Page</button>
             </div>
             </Link>
           </form>
