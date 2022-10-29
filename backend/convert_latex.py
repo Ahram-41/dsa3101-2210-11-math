@@ -4,6 +4,7 @@ import requests
 import json
 from zipfile import ZipFile
 
+
 image_formats = [".png", ".jpg"]
 
 
@@ -21,10 +22,10 @@ def request_body(file_path):
             "app_key": "ddc6e8e904b4f7ffcedd76d87fbd010ba27f0269e026137e8899e00cc6bb93f9"
         }
     )
-    if r.json().has_key("latex_styled"):
-        return r.json().get("latex_styled")
-    else:
-        return r.json().get("text")
+    # if r.json().has_key("latex_styled"):
+    #     return r.json().get("latex_styled")
+    # else:
+    return r.json().get("text")
     
 
 
