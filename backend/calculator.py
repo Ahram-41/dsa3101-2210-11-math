@@ -31,6 +31,13 @@ def derivative(latex):
   return latex2latex(tex)
 
 
+def cal_combination(a,b):
+    # this is a placeholder
+    tex=r"\binom{" + a + "}{" + b + "}"
+
+    return latex2latex(tex)
+
+
 def definite_integration(latex,a,b):
   a=str(a)
   b=str(b)
