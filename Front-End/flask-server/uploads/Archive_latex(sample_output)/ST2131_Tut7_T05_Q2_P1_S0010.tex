@@ -1,0 +1,29 @@
+$M \cup U(70,140) \rightarrow f_{M}(m)=\left\{\begin{array}{ll}\frac{1}{x}, & a<x<b . \\ 0 . & \text { otherwise }\end{array}\right.$
+Let $x$ be your bid and $r$ be profit
+$Y=\left\{\begin{array}{l}x-100 \text {, with probability } P(x<M) \\ 0 \text {, otherwise }\end{array}\right.$
+\[
+\begin{array}{l}
+P(Y=X-100)=P^{\prime}(x<M)=1-P\left(M^{\prime}=x\right) \\
+P(M=x)=\left\{\begin{array}{ll}
+0 & \text { if } x<70 \\
+\frac{x}{10-1} & \text { if } 705 x=140 \\
+1 & \text { if } x \geqslant 140
+\end{array}\right. \\
+\therefore P(Y=x-100)=\left\{\begin{array}{ll}
+1 & \text { if } x<70 \\
+2-\frac{x}{70} & \text { if } 70<x<140 \\
+0 & \text { if } x \geqslant 140
+\end{array}\right. \\
+\begin{aligned}
+E(Y) &=(x-100)\left(2-\frac{x}{70}\right)=2 x-\frac{x^{2}}{70}-200+\frac{10}{7} x=-\frac{x^{2}}{70}+\frac{24}{7} x-200=-\frac{1}{70}\left(x^{2}-240 x\right)-200 \\
+&=-\frac{1}{70}\left(x^{2}-240 x+14400\right)+\frac{1440}{7}-200 \\
+&=-\frac{1}{70}(x-120)^{2}+\frac{40}{7}
+\end{aligned}
+\end{array}
+\]
+\[
+E^{\prime}(Y)=-\frac{1}{35}(x-120)=0, x=120
+\]
+$x<120, E^{\prime}(x)>0, E$ is imereasng
+$x>120, E^{\prime}(p)<0, E$ is decreabing.
+$\therefore$ At $x=120, t(1) \geq$ at maximum.
