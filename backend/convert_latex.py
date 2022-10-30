@@ -23,49 +23,58 @@ def request_body(file_path):
             "app_key": "ddc6e8e904b4f7ffcedd76d87fbd010ba27f0269e026137e8899e00cc6bb93f9"
         }
     )
-    return r.json().get("text")
+    return str(r.json().get("text"))
 
 
 # add pdf format info in tex file
-s1="\\pdfminorversion=4\n"
-s1+="\\documentclass[]{article}\n"
-s1+="\\usepackage[utf8]{inputenc}\n"
-s1+="\\usepackage{amssymb,latexsym,amsmath}\n"
-s1+="\\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}\n"
-s1+="\\usepackage{graphicx}\n"
-s1+="\\usepackage[colorlinks=true, allcolors=blue]{hyperref}\n"
-s1+="\\begin{document}\n\n"
-s2="\n\n\\end{document}" 
 
-def amendLatex(str):
-	str = s1+str+s2
+
+# def amendLatex(s):
+# 	s = s1+s+s2
+#     return str(s)
 
 
 
 def open_file(dir):
     # unzip the uploaded file
     pic_directory = dir[:-4]
-    os.mkdir(pic_directory)
+    os.makedirs(pic_directory)
     latex_directory = pic_directory+"_latex"
-    os.mkdir(latex_directory)
-    
+    os.makedirs(latex_directory)
+    s1="\\pdfminorversion=4\n"
+    s1+="\\documentclass[]{article}\n"
+    s1+="\\usepackage[utf8]{inputenc}\n"
+    s1+="\\usepackage{amssymb,latexsym,amsmath}\n"
+    s1+="\\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}\n"
+    s1+="\\usepackage{graphicx}\n"
+    s1+="\\usepackage[colorlinks=true, allcolors=blue]{hyperref}\n"
+    s1+="\\begin{document}\n\n"
+    # can add if condition to specify
+    s1+="\\begin{math}\n\n"
+
+    s2="\n\\end{math}\n" 
+    s2+="\n\n\\end{document}" 
     with ZipFile(dir, 'r') as zip:
         zip.extractall(pic_directory)
-            
+    print(type(s1))
+
 
     # convert all image in the dir to latex
     for filename in os.listdir(pic_directory):
         # if is image file
         if any(x in filename for x in image_formats):
             pic=os.path.join(pic_directory, filename)
-            tex = f"{os.path.join(latex_directory, filename)[:-4]}.tex"
-
+            tex = os.path.join(latex_directory, filename)[:-4]+".tex"
             # write .tex file
-            f = open(f"{os.path.join(latex_directory, filename)[:-4]}.tex","w+")
+            f = open(tex,"w+")
+            f.write(str(s1))
             r = request_body(pic)
+            
+            s = str(r)+str(s2)
+            s = str(s)
             # add pdf format info in tex file
-            f.write(amendLatex(str(r)))
-
+            f.write(s)
+            f.close()
             createPDF(tex)
 
     return latex_directory
