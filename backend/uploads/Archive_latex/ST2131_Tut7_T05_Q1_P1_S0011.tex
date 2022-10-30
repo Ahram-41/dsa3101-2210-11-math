@@ -1,0 +1,16 @@
+\pdfminorversion=4
+\documentclass[]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,latexsym,amsmath}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\begin{document}
+
+\begin{math}
+
+$\begin{aligned} F_{X}(x)=P(X \leqslant x) &=P(\ln Y \leqslant x) \\ &=P\left(Y \leqslant e^{x}\right) \\ &=\int_{e-}^{e^{x}} e^{-y} d y \\ &=\left[-e^{-y}\right]_{0}^{e^{x}} \\ &=1-e^{-e^{x}} \\ f_{x}(x)=F_{X(x)}^{\prime} &=e^{-e^{x}} \cdot e^{x} \\ &=e^{x-e^{x}} \quad(\text { for } x \in \mathbb{R}) \end{aligned}$
+\end{math}
+
+
+\end{document}

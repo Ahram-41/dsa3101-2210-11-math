@@ -10,7 +10,7 @@ def createPDF(tex_filename):
     # TeX source filename
     filename, ext = os.path.splitext(tex_filename)
     # the corresponding PDF filename
-    pdf_filename = filename + '.pdf'
+    pdf_filename = tex_filename[:-4] + '.pdf'
     # compile TeX file
     subprocess.run(['pdflatex', '-interaction=nonstopmode', tex_filename])
 

@@ -1,0 +1,20 @@
+\pdfminorversion=4
+\documentclass[]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,latexsym,amsmath}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\begin{document}
+
+\begin{aligned}
+&P(x \leqslant x) \\
+&=P(\ln y \leq x) \\
+&=P\left(y \leqslant e^x\right) \\
+&=\int_0^{e^x} e^{-y} d y \\
+&=F_y\left(e^x\right) \\
+&f_y\left(e^x\right) \times e^x=e^{-e^x} \times e^x \\
+&\quad f_X(x)\left\{e^{-e^x}\left(e^x\right) \text { for all } x \in \mathbb{R}\right.
+\end{aligned}
+
+\end{document}

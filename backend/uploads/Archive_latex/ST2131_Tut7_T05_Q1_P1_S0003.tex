@@ -1,0 +1,35 @@
+\pdfminorversion=4
+\documentclass[]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,latexsym,amsmath}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\begin{document}
+
+
+CDF:
+$$
+\begin{math}
+\begin{aligned}
+F_x(x)=P(x \leq x) &=P(\ln y \leq x) \\
+&=P\left(y \leq e^x\right) \\
+&=F_y\left(e^x\right)
+\end{aligned}
+\begin{math}
+$$
+PDF
+$$
+\begin{math}
+\begin{aligned}
+f_x(x) &=\frac{\partial}{\partial x} F_y\left(e^x\right) \\
+&=e^x f_y\left(e^x\right)=e^x e^{-e^x}=\left\{\begin{array}{l}
+e^{x-e^x}, x \in \mathbb{R} . \\
+0
+\end{array}\right.
+\end{aligned}
+\begin{math}
+$$
+
+
+\end{document}
