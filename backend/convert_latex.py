@@ -26,21 +26,13 @@ def request_body(file_path):
     return str(r.json().get("text"))
 
 
-# add pdf format info in tex file
-
-
-# def amendLatex(s):
-# 	s = s1+s+s2
-#     return str(s)
-
-
-
 def open_file(dir):
     # unzip the uploaded file
     pic_directory = dir[:-4]
     os.makedirs(pic_directory)
     latex_directory = pic_directory+"_latex"
     os.makedirs(latex_directory)
+# add pdf format info in tex file
     s1="\\pdfminorversion=4\n"
     s1+="\\documentclass[]{article}\n"
     s1+="\\usepackage[utf8]{inputenc}\n"
@@ -52,11 +44,13 @@ def open_file(dir):
     # can add if condition to specify
     s1+="\\begin{math}\n\n"
 
-    s2="\n\\end{math}\n" 
+    s2="\n\n\\end{math}\n" 
     s2+="\n\n\\end{document}" 
+
+
     with ZipFile(dir, 'r') as zip:
         zip.extractall(pic_directory)
-    print(type(s1))
+        print(type(s1))
 
 
     # convert all image in the dir to latex
