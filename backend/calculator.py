@@ -48,11 +48,11 @@ is_equivalent is to check if the equation holds or not
 by checking whether the left side is equivalent with right side
 '''
 def is_equivalent(a_latex, b_latex):
-    #if is_combination(a_latex) or is_combination(b_latex):
-     # return cal_combination(a_latex) == cal_combination(b_latex)
-
-    #else:
-    return latex2latex(a_latex) == latex2latex(b_latex)
+    tex = a_latex + "-" + b_latex
+    if latex2latex(tex) == "0" :
+        return True
+    else:
+        return False
 
 '''
 this fuction is to calculate the result of latex
