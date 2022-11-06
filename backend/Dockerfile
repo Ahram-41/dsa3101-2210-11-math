@@ -11,11 +11,15 @@ RUN ["apt", "install", "-y", "texlive-latex-base"]
 RUN ["apt", "install", "-y", "texlive"]
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
+# to use bttr model
+COPY ./model ./model
+RUN pip install -e ./model
+
 EXPOSE 5000
-# COPY . .
+
 
 # docker build -t flask-app .
-# docker run -v ${PWD}:/app/tmp flask-app
+# docker run --name team11 -v ${PWD}:/app/tmp flask-app
 
 ENTRYPOINT [ "python", "-u", "-m", "flask", "run", "--host=0.0.0.0"]
 
