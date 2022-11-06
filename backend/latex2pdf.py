@@ -15,8 +15,8 @@ def createPDF(tex_filename):
     subprocess.run(['pdflatex', '-interaction=nonstopmode', tex_filename])
 
     # check if PDF is successfully generated
-    if not os.path.exists(pdf_filename):
-        raise RuntimeError('PDF output not found')
+    # if not os.path.exists(pdf_filename):
+    #     raise RuntimeError('PDF output not found')
         
 def openPDF(pdf_filename):
     # open PDF with platform-specific command
