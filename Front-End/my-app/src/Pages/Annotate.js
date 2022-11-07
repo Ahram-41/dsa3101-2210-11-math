@@ -88,7 +88,6 @@ function Annotate() {
         </div>
         
         <div label="See original version">
-        
             <div className="orig">
                 <img  src={handwritten} style={{width:'35%' ,height:'auto'}}/>
             </div>
