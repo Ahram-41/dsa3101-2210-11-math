@@ -25,6 +25,8 @@ function Annotate() {
     return (
     <>
     <Navbar />
+    <br >
+    </br>
     <div className='rowC'>
         <button className="student-button" style={{width:'500px'}}
         onClick={() => setDocument("another-example.pdf")}>
@@ -62,6 +64,12 @@ function Annotate() {
             Next student {String.fromCharCode(8594)}
         </button>
     </div>
+    <hr  style={{
+    color: 'grey',
+    backgroundColor: 'grey',
+    height: .5,
+    borderColor : 'grey'
+    }}/>
     <Tabs>
         <div label="Question">
             {/* <button className="discreet-button"
