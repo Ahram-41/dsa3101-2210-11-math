@@ -1,0 +1,103 @@
+.card-container{
+    width: 300px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px -5px;
+    transition: 0.3s;
+    animation: ease-in;
+    margin-left: 20em;
+    margin-top: 5em;
+    display: block;
+    
+}
+
+.card-container:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px -5px;
+
+}
+
+.image-container img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    overflow: hidden;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    position: absolute
+    
+    
+
+}
+
+.image-container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    overflow: hidden;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    
+
+}
+
+.card-content{
+    margin:1rem;
+    margin-top:0.3rem;
+    text-align: center;
+
+}
+
+h3,p{
+    /* Resetting default value */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+
+}
+
+.card-title{
+    margin-bottom: 0.5rem;
+    text-align: center;
+
+}
+
+.btn{
+    display:flex;
+    justify-content: center;
+
+}
+
+.btn button{
+    padding: 0.rem;
+    background-color: white;
+    border: none;
+    transition: 0.2s;
+    margin-bottom: 0.5rem;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+
+.btn paddedbutton{
+    padding-left: 50%
+
+}
+
+.btn button:hover{
+    background:rgba(27,156,252,0.1);
+
+}
+
+a{
+    text-transform: uppercase;
+    color: #1B9CFC;
+    text-decoration: none;
+    font-weight: bold;
+}

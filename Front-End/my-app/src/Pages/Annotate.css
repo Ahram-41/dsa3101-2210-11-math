@@ -1,0 +1,69 @@
+.Ann {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .Ann-button {
+    border:100px;
+    display:block;
+    width: 100%;
+    background: rgb(97, 139, 224);
+    color: white;
+    font-size: 1.2em;
+    padding: 0.5em;
+    border-color:brown;
+    border-radius: 100px;
+  }
+  .student-button {
+    border:100px;
+    display:block;
+    width: 100%;
+    background: rgb(211, 138, 21);
+    color: white;
+    font-size: 1.2em;
+    padding: 0.5em;
+    border-color:brown;
+    border-radius: 100px;
+  }
+  .discreet-button {
+    border:100px;
+    display:block;
+    width: 100%;
+    background: rgb(85, 84, 136);
+    color: rgb(231, 231, 238);
+    font-size: 1em;
+    padding: 0.2em;
+    border-color:brown;
+    border-radius: 100px;
+  }
+  .version-button {
+    border:100px;
+    display:block;
+    width: 100%;
+    background: rgb(85, 84, 136);
+    color: rgb(231, 231, 238);
+    font-size: 1em;
+    padding: 0.2em;
+    border-color:brown;
+    border-radius: 100px;
+  }
+  
+  .Ann-viewer {
+    position: relative;
+    flex: 1;
+  }
+  
+  .orig{
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+  }
+
+  .filter{
+    position: static;
+    display: inline-block;
+  }
+ 
