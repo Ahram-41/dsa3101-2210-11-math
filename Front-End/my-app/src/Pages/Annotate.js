@@ -12,7 +12,6 @@ import "./Annotate.css"
 import "./Annotate1.css"
 import handwritten from './handwritten3.png'
 import Box from '@mui/material/Box';
-//npm install @mui/material @emotion/react @emotion/styled
 import Button from '@mui/material/Button';
 
 function Annotate() {
@@ -25,6 +24,8 @@ function Annotate() {
     return (
     <>
     <Navbar />
+    <br >
+    </br>
     <div className='rowC'>
         <button className="student-button" style={{width:'500px'}}
         onClick={() => setDocument("another-example.pdf")}>
