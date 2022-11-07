@@ -62,6 +62,12 @@ function Annotate() {
             Next student {String.fromCharCode(8594)}
         </button>
     </div>
+    <hr  style={{
+    color: 'navy',
+    backgroundColor: 'navyblue',
+    height: 0.1,
+    borderColor : 'grey'
+    }}/>
     <Tabs>
         <div label="Question">
             {/* <button className="discreet-button"
