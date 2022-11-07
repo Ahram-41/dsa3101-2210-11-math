@@ -14,6 +14,7 @@ import handwritten from './handwritten3.png'
 import Box from '@mui/material/Box';
 //npm install @mui/material @emotion/react @emotion/styled
 import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
 
 function Annotate() {
     const [document, setDocument] = useState("document.pdf");
@@ -25,8 +26,9 @@ function Annotate() {
     return (
     <>
     <Navbar />
-    <br >
-    </br>
+
+    <br />
+
     <div className='rowC'>
         <button className="student-button" style={{width:'500px'}}
         onClick={() => setDocument("another-example.pdf")}>
@@ -70,6 +72,11 @@ function Annotate() {
     height: .5,
     borderColor : 'grey'
     }}/>
+    <div className="parent">
+     <div className="child-one" >  
+
+
+
     <Tabs>
         <div label="Question">
             {/* <button className="discreet-button"
@@ -92,12 +99,26 @@ function Annotate() {
         </div>
         
         <div label="See original version">
-        
             <div className="orig">
                 <img  src={handwritten} style={{width:'35%' ,height:'auto'}}/>
             </div>
         </div>
     </Tabs>
+    </div>
+ <div className='child-two'>
+ <br/>
+ <Stack spacing={27}>
+ <h2>
+    &nbsp;&nbsp;&nbsp;&nbsp; Errors
+    </h2>
+    <br/>
+    <br/>
+    <p style={{border: '1px solid rgba(0, 0, 0, 5)'}} >
+    Line 4: Wrong Evaluation
+    </p>
+</Stack>
+    </div>  
+    </div>
     </>
   );
 }
