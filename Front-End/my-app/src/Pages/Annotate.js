@@ -15,10 +15,25 @@ import handwritten from './handwritten3.png'
 
 function Annotate() {
     const [document, setDocument] = useState("document.pdf");
+    const question = [
+        { value: '1', label: '1' },
+        { value: '2', label: '2' },
+      ];
 
     return (
     <>
     <Navbar />
+    <div style={{width: '300px'}}>
+        <form>
+            <label>
+                Student Number: 
+                <input type="text" name="number" />
+            </label>
+            <button className='stunumgo' /* style={{width : '100px'}} */ type='submit'>Search</button>
+        </form>
+        Question: 
+        <Select className="filter" options = {question}/>
+    </div>
     <div className='rowC'>
         <button className="student-button"
         onClick={() => setDocument("another-example.pdf")}>
