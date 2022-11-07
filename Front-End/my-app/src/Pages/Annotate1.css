@@ -18,3 +18,31 @@
   .rowC{display:flex; 
     padding-left: 0.8rem;
     flex-direction:row;}
+
+ .parent{display:flex; 
+      
+    }
+  
+
+  .child-one{
+    flex-basis: 80%;
+    }
+    
+  .child-two{
+    padding-left: 5;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
+    height: 50px;
+
+      
+      }
+  
+  .border{
+    border: '1px solid red', 
+
+
+  }
+
+    
+                
