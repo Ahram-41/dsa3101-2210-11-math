@@ -11,7 +11,9 @@ import Tabs from "../Components/Tabs.js"
 import "./Annotate.css"
 import "./Annotate1.css"
 import handwritten from './handwritten3.png'
-
+import Box from '@mui/material/Box';
+//npm install @mui/material @emotion/react @emotion/styled
+import Button from '@mui/material/Button';
 
 function Annotate() {
     const [document, setDocument] = useState("document.pdf");
@@ -23,23 +25,39 @@ function Annotate() {
     return (
     <>
     <Navbar />
-    <div style={{width: '300px'}}>
-        <form>
-            <label>
-                Student Number: 
-                <input type="text" name="number" />
-            </label>
-            <button className='stunumgo' /* style={{width : '100px'}} */ type='submit'>Search</button>
-        </form>
-        Question: 
-        <Select className="filter" options = {question}/>
-    </div>
     <div className='rowC'>
-        <button className="student-button"
+        <button className="student-button" style={{width:'500px'}}
         onClick={() => setDocument("another-example.pdf")}>
             {String.fromCharCode(8592)} Previous student
         </button>
-        <button className="student-button"
+        <div>
+        <div className='rowC' >
+            
+            <form className='rowC   '>
+                <p className='rowC'>
+                    <p style={{paddingRight:'20px',paddingTop:'3px'}}>
+                        Student Number: 
+                    </p>
+                    <input type="text" name="number"
+                    style={{height:'2.9em'}}/>
+                </p>
+            </form>
+            <p style={{paddingLeft:'20px', paddingRight:'20px', paddingTop:'10px'}}>
+            Question:
+            </p> 
+            <Select className="filter" options = {question} 
+            style={{height:'0.8em;',lineheight:'1.8em'}}/>
+        </div>
+        <button className='stunumgo'
+          style={{width : '100px', paddingLeft:'280px'}} 
+         type='submit'>
+            Search
+         </button>
+    </div>
+        <p style={{color:'white'}}>
+            Hello
+        </p>
+        <button className="student-button" style={{width:'500px'}}
         onClick={() => setDocument("another-example.pdf")}>
             Next student {String.fromCharCode(8594)}
         </button>

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";   
 import Profile from "./Profile.js";
-import Login from "./Login.jsx";
+import Login from "./Login";
 import Mod1 from './Pages/mod1';
 import Mod2 from './Pages/mod2';
 import Mod3 from './Pages/mod3';
