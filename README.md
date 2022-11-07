@@ -12,3 +12,30 @@ Our Idea now is to develop an platform that shortens the time consumed by Gradin
 4. Suggest the question grading by highlitting the flagged mistakes? -1/-all
 
 5. Adding up and gives the results.
+
+```
+.
+├── backend(flask-server)
+│   ├── model
+│   ├── uploads
+│   ├── node_modules
+│   ├── server.py
+│   ├── convert_latex.py
+│   ├── latex2pdf.py
+│   ├── calculator.py
+│   ├── convert_latex.py
+│   ├── enhance_contrast.py
+│   ├── Dockerfile
+│   ├── requirement.txt
+│   └── README.md
+├── dataset
+├── Front-end(my-app)
+│   ├── src
+│   ├── public
+│   ├── package.json
+│   └── testkm.txt
+└── README.md
+```
+
+
+

@@ -2,7 +2,7 @@ FROM python:3.8
 
 WORKDIR /app
 # need to reorgnize the path name
-ENV FLASK_APP=./tmp/flask-server/server.py
+ENV FLASK_APP=./tmp/server.py
 ENV FLASK_RUN_HOST=0.0.0.0
 RUN pip install --upgrade pip
 RUN ["apt-get", "update"]
@@ -14,6 +14,7 @@ RUN pip3 install -r requirements.txt
 # to use bttr model
 COPY ./model ./model
 RUN pip install -e ./model
+
 
 EXPOSE 5000
 
