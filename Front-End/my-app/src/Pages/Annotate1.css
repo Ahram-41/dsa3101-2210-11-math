@@ -19,8 +19,8 @@
     padding-left: 0.8rem;
     flex-direction:row;}
 
- .parent{display:flex; 
-      
+ .parent{
+  display:flex; 
     }
   
 

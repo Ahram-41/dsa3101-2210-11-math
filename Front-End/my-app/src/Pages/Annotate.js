@@ -107,8 +107,6 @@ function Annotate() {
     Line 4: Wrong Evaluation
     </p>
 </Stack>
-
-   
     </div>  
     </div>
     </>
