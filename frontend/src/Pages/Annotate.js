@@ -15,20 +15,26 @@ import Box from '@mui/material/Box';
 //npm install @mui/material @emotion/react @emotion/styled
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
+import EdiText from 'react-editext';
+//npm install --save react-editext
 
 function Annotate() {
     const [document, setDocument] = useState("document.pdf");
+    const [text, setText] = useState("Marks:")
     const question = [
         { value: '1', label: '1' },
         { value: '2', label: '2' },
       ];
-
+    const [value, setValue] = useState('Input marks here');
+    const handleSave = (val) => {
+        console.log('Edited Value -> ', val);
+        setValue(val);
+    };
     return (
     <>
     <Navbar />
-
-    <br />
-
+    <br >
+    </br>
     <div className='rowC'>
         <button className="student-button" style={{width:'500px'}}
         onClick={() => setDocument("another-example.pdf")}>
@@ -74,9 +80,6 @@ function Annotate() {
     }}/>
     <div className="parent">
      <div className="child-one" >  
-
-
-
     <Tabs>
         <div label="Question">
             {/* <button className="discreet-button"
@@ -85,13 +88,22 @@ function Annotate() {
             </button> */}
             <div className='rowC'>
                 <button className="version-button"
-                onClick={() => setDocument("document.pdf")}>
+                onClick={() => {setDocument("document.pdf");setText("Marks for Question 1:")}}>
                     Question 1
                 </button>
                 <button className="version-button"
-                onClick={() => setDocument("another-example.pdf")}>
+                onClick={() => {setDocument("another-example.pdf");setText("Marks for Question 2:")}}>
                     Question 2
                 </button>
+            </div>
+            <div className='rowC'>
+                <p style={{paddingLeft:'600px',paddingRight:'30px',
+                           paddingTop:'12px'}}>
+                    {text}
+                </p>
+                <EdiText type="text" 
+                style={{paddingLeft:'100px'}}
+                value={value} onSave={handleSave} />
             </div>
             <div className="Ann-viewer">
                 <PdfViewerComponent document={document} />
@@ -99,27 +111,29 @@ function Annotate() {
         </div>
         
         <div label="See original version">
+        
             <div className="orig">
                 <img  src={handwritten} style={{width:'35%' ,height:'auto'}}/>
             </div>
         </div>
     </Tabs>
     </div>
- <div className='child-two'>
- <br/>
- <Stack spacing={27}>
- <h2>
-    &nbsp;&nbsp;&nbsp;&nbsp; Errors
-    </h2>
+
+    <div className='child-two'>
     <br/>
-    <br/>
-    <p style={{border: '1px solid rgba(0, 0, 0, 5)'}} >
-    Line 4: Wrong Evaluation
-    </p>
-</Stack>
-    </div>  
-    </div>
-    </>
+    <Stack spacing={27}>
+    <h2>
+       &nbsp;&nbsp;&nbsp;&nbsp; Errors
+       </h2>
+       <br/>
+       <br/>
+       <p style={{border: '1px solid rgba(0, 0, 0, 5)'}} >
+       Line 4: Wrong Evaluation
+       </p>
+   </Stack>
+       </div>  
+       </div>
+       </>
   );
 }
   
