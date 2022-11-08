@@ -59,7 +59,7 @@ function Annotate() {
             style={{height:'0.8em;',lineheight:'1.8em'}}/>
         </div>
         <button className='stunumgo'
-          style={{width : '100px', paddingLeft:'280px'}} 
+          style={{width : '100px', paddingLeft:'280px',}} 
          type='submit'>
             Search
          </button>
