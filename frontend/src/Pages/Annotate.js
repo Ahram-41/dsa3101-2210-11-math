@@ -15,14 +15,20 @@ import Box from '@mui/material/Box';
 //npm install @mui/material @emotion/react @emotion/styled
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
+import EdiText from 'react-editext';
 
 function Annotate() {
     const [document, setDocument] = useState("document.pdf");
+    const [text,setText] = useState("Marks:")
     const question = [
         { value: '1', label: '1' },
         { value: '2', label: '2' },
       ];
-
+    const [value,setValue] = useState('Input marks here');
+    const handleSave = (val) => {
+        console.log('Edited value -> ', val);
+        setValue(val);
+    };
     return (
     <>
     <Navbar />
@@ -85,13 +91,22 @@ function Annotate() {
             </button> */}
             <div className='rowC'>
                 <button className="version-button"
-                onClick={() => setDocument("document.pdf")}>
+                onClick={() => {setDocument("document.pdf");setText("Marks for Question 1:")}}>
                     Question 1
                 </button>
                 <button className="version-button"
-                onClick={() => setDocument("another-example.pdf")}>
+                onClick={() => {setDocument("another-example.pdf");setText("Marks for Question 2:")}}>
                     Question 2
                 </button>
+            </div>
+            <div className='rowC'>
+                <p style={{paddingLeft:'600px',paddingRight:'30px',
+                           paddingTop:'12px'}}>
+                    {text}
+                </p>
+                <EdiText type="text" 
+                style={{paddingLeft:'100px'}}
+                value={value} onSave={handleSave} />
             </div>
             <div className="Ann-viewer">
                 <PdfViewerComponent document={document} />
@@ -107,15 +122,25 @@ function Annotate() {
     </div>
  <div className='child-two'>
  <br/>
- <Stack spacing={27}>
+
  <h2>
-    &nbsp;&nbsp;&nbsp;&nbsp; Errors
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  Errors
+    <br />
     </h2>
+    <hr  style={{
+    color: 'grey',
+    backgroundColor: 'grey',
+    height: .3,
+    borderColor : 'grey'
+    }}/>
+     <Stack spacing={27}>
     <br/>
     <br/>
     <p style={{border: '1px solid rgba(0, 0, 0, 5)'}} >
     Line 4: Wrong Evaluation
     </p>
+
+   
 </Stack>
     </div>  
     </div>
