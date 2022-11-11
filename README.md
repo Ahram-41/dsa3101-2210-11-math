@@ -29,11 +29,13 @@ Our Idea now is to develop an platform that shortens the time consumed by Gradin
 │   ├── requirement.txt
 │   └── README.md
 ├── dataset
+├── docker-compose.yml
 ├── Front-end(my-app)
 │   ├── src
 │   ├── public
 │   ├── package.json
-│   └── testkm.txt
+│   ├── nginx.default.conf
+│   └── Dockerfile
 └── README.md
 ```
 
