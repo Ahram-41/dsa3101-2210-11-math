@@ -14,7 +14,7 @@ RUN pip3 install -r requirements.txt
 # to use bttr model
 COPY ./model ./model
 RUN pip install -e ./model
-
+COPY ./server.py ./tmp/server.py
 
 EXPOSE 5000
 

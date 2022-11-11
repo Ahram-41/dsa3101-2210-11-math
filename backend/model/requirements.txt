@@ -7,5 +7,5 @@ jsonargparse[signatures]==4.1.1
 flake8==3.9.0
 black==20.8b1
 isort==5.8.0
-torch==1.12.1
-torchvision==0.10.0
+torch
+torchvision
