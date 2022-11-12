@@ -16,18 +16,17 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import EdiText from 'react-editext';
-//npm install --save react-editext
 
 function Annotate() {
     const [document, setDocument] = useState("document.pdf");
-    const [text, setText] = useState("Marks:")
+    const [text,setText] = useState("Marks:")
     const question = [
         { value: '1', label: '1' },
         { value: '2', label: '2' },
       ];
-    const [value, setValue] = useState('Input marks here');
+    const [value,setValue] = useState('Input marks here');
     const handleSave = (val) => {
-        console.log('Edited Value -> ', val);
+        console.log('Edited value -> ', val);
         setValue(val);
     };
     return (
@@ -118,6 +117,7 @@ function Annotate() {
         </div>
     </Tabs>
     </div>
+<<<<<<< HEAD
 
     <div className='child-two'>
     <br/>
@@ -134,6 +134,33 @@ function Annotate() {
        </div>  
        </div>
        </>
+=======
+ <div className='child-two'>
+ <br/>
+
+ <h2>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  Errors
+    <br />
+    </h2>
+    <hr  style={{
+    color: 'grey',
+    backgroundColor: 'grey',
+    height: .3,
+    borderColor : 'grey'
+    }}/>
+     <Stack spacing={27}>
+    <br/>
+    <br/>
+    <p style={{border: '1px solid rgba(0, 0, 0, 5)'}} >
+    Line 4: Wrong Evaluation
+    </p>
+
+   
+</Stack>
+    </div>  
+    </div>
+    </>
+>>>>>>> 3742e050008416bf05563674e86ac03e3035c59c
   );
 }
   

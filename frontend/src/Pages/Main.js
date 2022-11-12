@@ -20,9 +20,9 @@ class Main extends React.Component {
         data.append('file', this.uploadInput.files[0]);
         data.append('filename', this.fileName.value);
     
-        fetch('http://localhost:5000/upload', { method: 'POST', body: data })
+        fetch('http://127.0.0.1:5000/upload', { method: 'POST', body: data })
         .then((response) => { response.json().then((body) => { 
-            this.setState({ imageURL: `http://localhost:5000/${body.file}` });
+            this.setState({ imageURL: `http://127.0.0.1:5000/${body.file}` });
           });
         });
       }
