@@ -3,7 +3,7 @@ version: '3.8'
 services:
   frontend:
         container_name: dsa3101-2210-11-math-fe
-        hostname: insight-portal-fe-service
+        hostname: dsa3101-2210-11-math-fe-service
         build:
           context: ./frontend
           dockerfile: Dockerfile
@@ -13,7 +13,7 @@ services:
           - dsa3101-2210-11-math-network
   backend:
         container_name: dsa3101-2210-11-math-be
-        hostname: insight-portal-be-service
+        hostname: dsa3101-2210-11-math-be-service
         build:
           context: ./backend
           dockerfile: Dockerfile
