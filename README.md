@@ -34,7 +34,11 @@ Our Idea now is to develop an platform that shortens the time consumed by Gradin
 │   ├── src
 │   ├── public
 │   ├── package.json
+<<<<<<< HEAD
 │   ├── ngingx.default.conf
+=======
+│   ├── nginx.default.conf
+>>>>>>> 49167a7a52e74538a90bab79d25b6ce541cb5c74
 │   └── Dockerfile
 └── README.md
 ```
