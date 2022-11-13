@@ -117,8 +117,6 @@ function Annotate() {
         </div>
     </Tabs>
     </div>
-<<<<<<< HEAD
-
     <div className='child-two'>
     <br/>
     <Stack spacing={27}>
@@ -134,33 +132,6 @@ function Annotate() {
        </div>  
        </div>
        </>
-=======
- <div className='child-two'>
- <br/>
-
- <h2>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  Errors
-    <br />
-    </h2>
-    <hr  style={{
-    color: 'grey',
-    backgroundColor: 'grey',
-    height: .3,
-    borderColor : 'grey'
-    }}/>
-     <Stack spacing={27}>
-    <br/>
-    <br/>
-    <p style={{border: '1px solid rgba(0, 0, 0, 5)'}} >
-    Line 4: Wrong Evaluation
-    </p>
-
-   
-</Stack>
-    </div>  
-    </div>
-    </>
->>>>>>> 3742e050008416bf05563674e86ac03e3035c59c
   );
 }
   
