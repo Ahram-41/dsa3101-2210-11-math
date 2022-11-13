@@ -1,31 +1,16 @@
-# get the base node image
-FROM node:alpine as builder
+# Build Front End
+FROM node:16-alpine as build-step
+WORKDIR /app
+ENV PATH /app/node_modules/.bin:$PATH
+COPY package.json ./
+COPY ./src ./src
+COPY ./public ./public
+RUN yarn install
+RUN yarn build
 
-# set the working dir for container
-WORKDIR /frontend
-
-# copy the json file first
-COPY package.json /frontend
-
-# install npm dependencies
-RUN npm install
-
-# copy other project files
-COPY ./ /frontend/
-
-# build the folder
-RUN npm run build
-
-# Handle Nginx
-FROM nginx
-COPY --from=builder /frontend/build/ /usr/share/nginx/html
-COPY ./nginx.default.conf /etc/nginx/conf.d/default.conf
-
-# EXPOSE 8080
-
-# CMD ["npm", "run", "start"]
-
-# docker build -t my-app .
-# docker run -p 3000:3000 --name team11_frontend -d my-app
-
-
+# Build step #2: build an nginx container
+FROM nginx:alpine
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=build-step /app/build /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

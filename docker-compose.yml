@@ -1,17 +1,26 @@
+version: '3.8'
+
 services:
-  backend:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
-    image: react_flask_backend
-
   frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
-    image: react_flask_frontend
-    ports:
-      - "3000:80"
-    depends_on:
-      - backend
-
+        container_name: dsa3101-2210-11-math-fe
+        hostname: dsa3101-2210-11-math-fe-service
+        build:
+          context: ./frontend
+          dockerfile: Dockerfile
+        ports:
+          - "80:80"
+        networks:
+          - dsa3101-2210-11-math-network
+  backend:
+        container_name: dsa3101-2210-11-math-be
+        hostname: dsa3101-2210-11-math-be-service
+        build:
+          context: ./backend
+          dockerfile: Dockerfile
+        ports:
+          - "5000:5000"
+        networks:
+          - dsa3101-2210-11-math-network
+networks:
+  dsa3101-2210-11-math-network:
+    name: "dsa3101-2210-11-math-network"
