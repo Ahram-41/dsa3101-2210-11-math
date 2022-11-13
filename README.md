@@ -13,6 +13,10 @@ Our Idea now is to develop an platform that shortens the time consumed by Gradin
 
 5. Adding up and gives the results.
 
+6. Using RNN to predict all expressions of the standard solutions and help to grade.
+
+7. Using WolframAlpha as a new API to get help functions.
+
 ```
 .
 ├── backend(flask-server)
