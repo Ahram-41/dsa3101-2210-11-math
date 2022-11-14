@@ -1,22 +1,27 @@
 # dsa3101-2210-11-math
 The Github repository for NUS DSA3101 11-Math Handwriting Recognition project team
 
-Our Idea now is to develop an platform that shortens the time consumed by Grading students' submissions.
+We developed an platform that shortens the time consumed by Grading students' submissions.
 
-1. Using Mathpix as a starting step for converting student submission file (preferred .png) to LaTex form. By using this API we make the recognition part easier for Professors (No bother of bad handwirtting! YEAH!).(Conversion correctness?)
+- the platform used Mathpix as a starting step for converting student submission file (preferred .png) to LaTex form. By using this API we make the recognition part easier for Professors (No bother of bad handwirtting! YEAH!).
 
-2. [Idea for now] try to take in some key steps by prof and flag out common mistakes.(How to Realize, Sorting?)
+- Users can annotate and grading in the online system etc.
 
-3. [Idea for now] Using the SymPy package to evaluate the first place correctness.
+## Our vision for the future works
 
-4. Suggest the question grading by highlitting the flagged mistakes? -1/-all
+- try to take in some key steps by prof and flag out common mistakes.(How to Realize, Sorting?)
 
-5. Adding up and gives the results.
+- Using the SymPy package to evaluate the first place correctness.
 
-6. Using RNN to predict all expressions of the standard solutions and help to grade.
+- Suggest the question grading by highlitting the flagged mistakes? -1/-all
 
-7. Using WolframAlpha as a new API to get help functions.
+- Adding up and gives the results.
 
+- Using RNN to predict all expressions of the standard solutions and help to grade.
+
+-  Using WolframAlpha as a new API to get help functions.
+
+## repository structure
 ```
 .
 ├── backend(flask-server)
@@ -32,7 +37,6 @@ Our Idea now is to develop an platform that shortens the time consumed by Gradin
 │   ├── Dockerfile
 │   ├── requirement.txt
 │   └── README.md
-├── dataset
 ├── docker-compose.yml
 ├── Front-end(my-app)
 │   ├── src
